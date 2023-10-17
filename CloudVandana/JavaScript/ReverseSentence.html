@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reversed The Sentence</title>
+    <style>
+        div{
+            height: 200px;
+            width: 550px;
+            margin-top: 150px;
+            margin-left: 300px;
+            
+        }
+        .in{
+            width: 500px;
+            height: 30px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div>
+    <form action="">
+        <label for="" id="">Enter Your Sentence </label>
+        <br>
+        <input type="text" id="first" class="in" placeholder="Enter Sentence ">
+        <br>
+    </form>
+    <br>
+    <button onclick="reverse()" class="">Submit</button>
+    <p id="print1">
+        
+    </p>
+</div>
+    <script>
+        function reverse() {
+            let sentence=document.getElementById("first").value
+           
+            let words = sentence.split(" ");
+
+            let reversedWords = words.map(word => {
+              return word.split("").reverse().join("");
+             });
+             let reversedSentence = reversedWords.join(" ");
+
+            let pri1=document.getElementById("print1")
+            pri1.innerHTML="Reversed is = "+ reversedSentence;
+            pri1.style.color='red'
+
+        }
+    </script>
+</body>
+</html>
